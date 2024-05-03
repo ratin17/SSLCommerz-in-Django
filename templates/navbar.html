@@ -1,0 +1,63 @@
+{% load cart_tag %}
+
+<!-- Navbar -->
+<nav style="background-color: aquamarine;" class="navbar navbar-expand-md navbar-light">
+
+  <div class="container">
+      <a class="navbar-brand" href="#!">
+    <img src="data:image/png;base64,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" height="30" alt="mdb logo">
+  </a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav1"
+    aria-controls="basicExampleNav1" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+    <li class="breadcrumb-item"><a class="waves-effect" href="{% url 'shop:home' %}">Home</a></li>
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="basicExampleNav1">
+
+    <!-- Right -->
+
+    <ul class="navbar-nav ml-auto">
+        {% if request.user.is_authenticated %}
+      <li class="nav-item">
+        <a href="{% url 'order:cart' request.user.id 1 %}" class="nav-link navbar-link-2 waves-effect">
+          <span class="badge badge-pill red">{{ request.user | cart_total }}</span>
+          <i class="fas fa-shopping-cart pl-0"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink3" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="true">
+          <i class="fas fa-user-alt"></i> {{request.user.username}}
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'payment:orders' %}">Orders</a>
+          <form method="POST" action="{% url 'accounts:logout' %}" class="dropdown-item" >
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+          </form>
+          
+        </div>
+      </li>
+
+    {% else %}
+
+        <li class="nav-item pl-2 mb-2 mb-md-0">
+        <a href="{% url 'accounts:login' %}" type="button"
+          class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Login</a>
+      </li>
+
+    {% endif %}
+    </ul>
+
+  </div>
+  <!-- Links -->
+  </div>
+
+</nav>
+<!-- Navbar -->

@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <p> Wrong Username or Password !</p>
+    {% endif %}
+    <p>Hello</p>
+
+    <form action="{% url 'accounts:login' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_div }}
+
+        <button name="submit">Log In</button>
+    </form>
+
+{% endblock content %}
